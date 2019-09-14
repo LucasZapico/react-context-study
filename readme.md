@@ -1,4 +1,5 @@
-# React and Context
+# React and Context - Study
 
-- share state throughout comps
-- an alternative to redux
+### Part Three
+
+### Resources

@@ -1,42 +1,120 @@
+$colora: #f77754;
+$colorb: #584b42;
+$colorc: #537d91;
+$colord: #a4d1c8;
+
 body {
+  background-color: lighten($colord,5%);
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: darken($colorb,10%);
 }
+
 
 /* app styles */
 .App {
-  max-width: 400px;
+  padding: 2rem;
   margin: 30px auto;
   text-align: center;
 }
 nav{
   padding: 5px;
-}
-nav ul {
+ ul {
   padding: 0;
-}
-nav ul li {
-  display: inline-block;
-  margin: 0 10px;
-}
-.book-list {
-  padding: 20px;
-  margin-bottom: 20px;
-}
-.book-list ul{
-  padding: 0;
-  list-style-type: none;
-}
-.book-list li {
-  padding: 10px;
-  margin: 10px auto;
-  border-radius: 10px;
+    li {
+    display: inline-block;
+    margin: 0 10px; 
+    }
+  }
+} 
+.navbar {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: lighten($colorb, 10%);
+  width: 100%;
 }
 
+.book-list {
+ &.empty {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+ }
+ background-color: lighten($colorb, 10%);
+ width: 100%;
+
+ ul{
+  margin: 0px;
+  padding: 0px;
+  list-style-type: none;
+}
+li {
+   hr {
+   border: solid 1px lighten($colorb, 5%);
+ }
+  text-align: left;
+  
+  padding: 10px;
+  cursor: pointer;
+  &:hover, &:active {
+   .title{
+     text-decoration: line-through;
+   } 
+  }
+  .title {
+    color: $colord;
+    font-weight: bold;
+  }
+  .author { 
+    color: darken($colorb, 10%);
+    font-size: .9rem;
+  }
+}
+}
+
+form {
+  input {
+    box-sizing: border-box;
+    width: 100%;
+    caret-color: $colord;
+    color: $colord;
+    font-size: 1rem;
+    background-color: $colorb;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    cursor: pointer;
+    border: none;
+    &[type="text"]{
+      &:active, &:focus{
+        border: none;
+        outline: none;
+        border-top: solid 1px $colord;
+        border-bottom: solid 1px $colord;
+      }
+    }
+    &[type='submit']{
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      background-color: darken($colord,10%);
+      font-size: 1.3rem;
+      color: $colorb;
+      &:hover {
+        background-color: darken($colord,20%);
+      }
+        &:active, &:focus{
+        border: none;
+        outline: none;
+        border-top: solid 1px $colord;
+        border-bottom: solid 1px $colord;
+      }
+      
+    }
+  }
+
+}
 button {
   outline: none;
   border: none;
