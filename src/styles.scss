@@ -1,0 +1,59 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* app styles */
+.App {
+  max-width: 400px;
+  margin: 30px auto;
+  text-align: center;
+}
+nav{
+  padding: 5px;
+}
+nav ul {
+  padding: 0;
+}
+nav ul li {
+  display: inline-block;
+  margin: 0 10px;
+}
+.book-list {
+  padding: 20px;
+  margin-bottom: 20px;
+}
+.book-list ul{
+  padding: 0;
+  list-style-type: none;
+}
+.book-list li {
+  padding: 10px;
+  margin: 10px auto;
+  border-radius: 10px;
+}
+
+button {
+  outline: none;
+  border: none;
+  padding: 1rem;
+  background-color: pink;
+  font-family: sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  border-radius: 50px;
+  text-transform: uppercase;
+  & :focus {
+    background-color: darken(pink, 10%);
+  }
+  &:hover {
+    background-color: lighten(pink, 5%);
+  }
+  &:active {
+    background-color: darken(pink, 10%);
+  }
+}
