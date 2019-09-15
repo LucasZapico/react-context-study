@@ -1,5 +1,7 @@
 # React and Context - Study
 
-### Part Three
+### Part Four
+
+- refactor for reducers
 
 ### Resources
